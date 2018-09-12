@@ -16,9 +16,10 @@ import hypertools as hyp
 ## Wide Data Plotting
 # import data
 beers = pd.read_csv('Group_Wide.csv')
-print(beers.head())
+print(beers)
 small_beers = beers[beers.Taster != 'Dan'] #didn't rate all of the beers
 
 # plot
 hue = small_beers['Taster']
-plot = hyp.plot(small_beers, '.', hue=hue, title='Wide Data') # plots dots
+
+__,__,__,__= hyp.plot(small_beers, 'o', hue=hue, labels=list(hue), title='Beer Space') # plots dots
