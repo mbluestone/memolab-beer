@@ -16,17 +16,9 @@ import hypertools as hyp
 ## Wide Data Plotting
 # import data
 beers = pd.read_csv('Group_Wide.csv')
-#print(beers.head())
-small_beers = beers[beers.Taster != 'Dan']
+print(beers.head())
+small_beers = beers[beers.Taster != 'Dan'] #didn't rate all of the beers
 
 # plot
 hue = small_beers['Taster']
-#plot = hyp.plot(small_beers, '.', hue=hue, title='Wide Data') # plots dots
-
-## Multiple Data Sets Plotting w/ Alignment
-# import data
-ind_path = cwd + '/Individual/'
-tasters = numpy.unique(hue)
-taster_data = {}
-for f in tasters:
-    taster_data[f] = pd.read_csv(ind_path + "%s.csv" % f)
+plot = hyp.plot(small_beers, '.', hue=hue, title='Wide Data') # plots dots
