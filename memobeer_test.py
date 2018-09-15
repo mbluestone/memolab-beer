@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
-# MemoLab Beer Data Analysis
-# An analysis of the MemoLab members' beer ratings using the Hypertools package
+# MemoLab Beer Data Analysis Test
+# Python script for testing Hypertools with our beer data
 
 # change working directory
 import os
@@ -22,4 +22,4 @@ small_beers = beers[beers.Taster != 'Dan'] #didn't rate all of the beers
 # plot
 hue = small_beers['Taster']
 
-__,__,__,__= hyp.plot(small_beers, 'o', hue=hue, labels=list(hue), title='Beer Space') # plots dots
+plot = hyp.plot(small_beers, 'o', hue=hue, labels=list(hue), title='Beer Space') # plots dots
